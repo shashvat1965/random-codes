@@ -1,6 +1,4 @@
-import java.util.Scanner;
-import java.lang.Math;   
-import java.util.Random;   
+   import java.util.Random;   
 class test {
     public static void main(String[] args) {
     	
