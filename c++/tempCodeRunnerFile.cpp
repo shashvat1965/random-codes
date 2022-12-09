@@ -14,28 +14,21 @@ int main()
 		cin >> arr[i];
 		int x = 0;
 		unsigned long long int temp = arr[i];
-		if (temp == 1)
-		{
-			cout << "NO"
-				 << "\n";
+		if(temp == 1){
+			x = 1;
+			cout << "NO" << "\n";
 			continue;
 		}
-		if (floor(sqrt(temp)) != sqrt(temp))
-		{
-			cout << "NO"
-				 << "\n";
+		if(floor(sqrt(temp)) != sqrt(temp)){
 			continue;
 		}
 		if (floor(sqrt(temp)) == sqrt(temp))
-		{	
-			int temp2 = sqrt(temp);
-			for (unsigned long long int j = 2; j*j <= temp2; j++)
+		{
+			for (unsigned long long int j = 2; j < floor(sqrt(sqrt(temp)))+1; j++)
 			{
-				if ( (temp2 % j) == 0)
+				if (temp % j == 0)
 				{
 					x = 1;
-					cout << "NO"
-						 << "\n";
 					break;
 				}
 			}
@@ -43,6 +36,11 @@ int main()
 		if (x == 0)
 		{
 			cout << "YES"
+				 << "\n";
+		}
+		else
+		{
+			cout << "NO"
 				 << "\n";
 		}
 	}
